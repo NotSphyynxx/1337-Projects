@@ -50,6 +50,13 @@ The 42 curriculum is a project-based peer-learning program. There are no teacher
 | **[cub3d](https://github.com/zakaria-jaddad/ft_cube)** | A "realistic" 3D graphical representation of the inside of a maze using Ray-Casting. | Graphics / Raycasting / Math | ✅ |
 | **[NetPractice](./NetPractice)** | Configuring small-scale networks. Training on TCP/IP addressing, subnetting, routing tables, and the OSI model. | Networking / SysAdmin | ✅ |
 
+### Rank 5: Advanced C++ & Infrastructure
+| Project | Description | Focus | Status |
+| :--- | :--- | :---: | :---: |
+| **[Cpp05-08](./Cpp05-08)** | Advanced C++98 (Exceptions, Templates, and the STL). | Classes / STL | 🔄 |
+| **[Inception](https://github.com/NotSphyynxx/Inception)** | System administration. Virtualizing Docker containers and setting up a LEMP stack. | Docker / SysAdmin | ✅ |
+| **[ft_irc](https://github.com/NotSphyynxx/ft_irc)** | Writing an IRC server in C++98. Sockets, multiplexing, and client/server architecture. | C++ / Networking | ✅ |
+
 ---
 
 ## 🎓 Exams & Assessments
@@ -59,6 +66,7 @@ Snapshots of my work during the 42 exams.
 * **[Exam02](./exam02)**: C basics, strings, and memory.
 * **[Exam03](./Exam03)**: `ft_printf` and `get_next_line` variations.
 * **[Exam04](./Exam04)**: Microshell (Process management).
+* **[Exam05](./Exam05)**: Advanced C++98 (Classes, STL, and Exceptions).
 * **[EXAM General](./EXAM)**: Practice and training files.
 
 ---
