@@ -1,35 +1,33 @@
 #include "easyfind.hpp"
-#include <iostream>
-#include <vector>
-#include <list>
 
-const char* notFoundExecption::what() const throw(){
-    return ("value not found !!");
+const char* NotFound::what() const throw() {
+    return "Error: Value not found";
 }
 
-int main() {
-    // ---------------------------------------------------------
-    // TEST 1: Using std::vector
-    // ---------------------------------------------------------
-    std::cout << "=== Testing with std::vector ===" << std::endl;
-    std::vector<int> myVector;
-    myVector.push_back(10);
-    myVector.push_back(20);
-    myVector.push_back(30);
-    myVector.push_back(40);
-
+int main(){
+    // int arr[] = {10, 20, 30, 40};
+    std::vector<int> v;
+    // WITH SUCCESS
     try {
-        // Success case
-        std::cout << "Searching for 30..." << std::endl;
-        std::vector<int>::iterator it1 = easyfind(myVector, 30);
-        std::cout << "Success! Found value: " << *it1 << "\n" << std::endl;
-
-        // Failure case
-        std::cout << "Searching for 99..." << std::endl;
-        std::vector<int>::iterator it2 = easyfind(myVector, 99);
-        std::cout << "Found value: " << *it2 << std::endl; // This won't print
-    } 
-    catch (const std::exception& e) {
-        std::cerr << "Exception caught: " << e.what() << "\n" << std::endl;
+        v.push_back(10);
+        v.push_back(20);
+        v.push_back(30);
+        v.push_back(40);
+        v.push_back(50);
+        // std::cout  << "Vector Cap: "<< v.capacity() << "\n" << "Vector Size: "<< v.size() << std::endl;
+        std::vector<int>::iterator it = EasyFind(v, 40);
+        std::cout << "Value Found !! : " << *it << std::endl;
     }
+    catch (std::exception &except){
+        std::cout << except.what() << std::endl;
+    }
+    // WITH ERROR
+        try {
+        std::vector<int>::iterator it = EasyFind(v, 70);
+        std::cout << "Value Found !! : " << *it << std::endl;
+    }
+    catch (std::exception &except){
+        std::cout << except.what() << std::endl;
+    }
+    return 0;
 }
